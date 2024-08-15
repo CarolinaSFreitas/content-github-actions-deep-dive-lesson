@@ -45,7 +45,7 @@ jobs:
           name: zipped-bundle
           path: ${{ github.sha }}.zip
   publish:
-    runs-on: ubuntu-latest:
+    runs-on: ubuntu-latest
     steps:
       - name: Create Release
         uses: actions/create-release@1
@@ -57,4 +57,3 @@ jobs:
           body: New release for ${{ github.sha }}. Release notes on the documentation site
           draft: false
           prerelease: false
-          
